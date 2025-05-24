@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Tenant;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MfaToken extends Model
+class UserTenant extends Model
 {
-    /** @use HasFactory<\Database\Factories\MfaTokenFactory> */
+    /** @use HasFactory<\Database\Factories\UserTenantFactory> */
     use HasFactory;
 }

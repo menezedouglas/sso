@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('social_providers', function (Blueprint $table) {
+        Schema::create('mfa_token_channels', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->string('label');
+            $table->string('icon')->nullable();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('social_providers');
+        Schema::dropIfExists('mfa_token_channels');
     }
 };

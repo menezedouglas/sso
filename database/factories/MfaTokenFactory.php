@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\MfaToken>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Authentication\MfaToken>
  */
 class MfaTokenFactory extends Factory
 {

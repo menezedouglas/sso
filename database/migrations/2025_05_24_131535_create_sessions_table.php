@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('sessions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('application_id')->constrained('applications');
+            $table->string('ip_address');
+            $table->string('user_agent');
+            $table->string('device');
+            $table->boolean('active');
+            $table->timestamp('ended_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

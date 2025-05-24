@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('brandings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('tenant_id')->constrained('tenants');
+            $table->string('primary_color')->nullable();
+            $table->string('secondary_color')->nullable();
+            $table->string('logo_url')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

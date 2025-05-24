@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('tenant_id')->constrained('tenants');
+            $table->string('name');
+            $table->string('redirect_uri')->nullable();
+            $table->string('client_id')->unique();
+            $table->string('client_secret')->unique();
+            $table->string('domain');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

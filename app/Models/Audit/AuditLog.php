@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Audit;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Branding extends Model
+class AuditLog extends Model
 {
-    /** @use HasFactory<\Database\Factories\BrandingFactory> */
+    /** @use HasFactory<\Database\Factories\AuditLogFactory> */
     use HasFactory;
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\RBAC;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UserSetting extends Model
+class Permission extends Model
 {
-    /** @use HasFactory<\Database\Factories\UserSettingFactory> */
+    /** @use HasFactory<\Database\Factories\PermissionFactory> */
     use HasFactory;
 }

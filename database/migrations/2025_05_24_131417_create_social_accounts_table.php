@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('social_accounts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('provider_id')->constrained('social_providers');
+            $table->string('token');
+            $table->string('refresh_token')->nullable();
+            $table->timestamp('expires_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
